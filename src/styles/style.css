@@ -17,4 +17,46 @@ body {
 
 .right {
   grid-area: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.personalDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "left right";
+}
+
+.personalDetailsLeft {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 1fr;
+}
+
+.fullName{}
+
+.jobTitle{}
+
+.summaryTitle{}
+
+.personalDetailsRight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "email phone"
+  "location linkedin"
+  "website github";
+}
+
+.personalDetailsRight > div {
+  max-height: 50px;
+}
+
+.summary {
+
+}
+
+.skills {
+  
 }

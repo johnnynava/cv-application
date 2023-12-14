@@ -46,7 +46,6 @@ export default function Left() {
         name="PersonalDetails"
         editIsActive={editIsActive}
         onClick={handleEditClick}
-        existingInfo={}
       ></EditButton>
       <EditButton
         name="Summary"

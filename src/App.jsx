@@ -56,7 +56,7 @@ function App() {
     },
   ]);
 
-  const [experience, setExperience] = useState([
+  const [employment, setEmployment] = useState([
     {
       position: "Senior Whale Researcher",
       company: "University of Galway",
@@ -113,8 +113,14 @@ function App() {
         <div className="projects"></div>
         <div className="employment"></div>
       </div>
-      {/* NEED TO TRACK STATE ON RIGHT (EACH COMPONENT) AND TRACK THE STATE OF RESPECTIVE COMPONENT TO UPADTE STATUS */}
-      {/* ALSO NEED TO TRACK STATE ON LEFT TO SEE IF A COMPONENT IS ACTIVE, IF SO, MINIMIZE THE OTHERS (MAKE THEM INVISIBLE) */}
+      <Right
+        personalDetails={personalDetails}
+        summary={summary}
+        skills={skills}
+        education={education}
+        projects={projects}
+        employment={employment}
+      ></Right>
     </div>
   );
 }
