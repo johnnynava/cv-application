@@ -188,7 +188,7 @@ h4 {
   border: 3.5px solid rgb(89, 165, 156);
 }
 
-.editPersonalDetailsBox > label {
+label {
   text-align: left;
   padding-left: 5px;
   color: black;
@@ -196,7 +196,7 @@ h4 {
 
 .editPersonalDetailsInput {
   border-radius: 15px;
-  padding: 5px 15px
+  padding: 5px 15px;
 }
 
 .left {
@@ -227,6 +227,27 @@ h4 {
   border-radius: 50px;
 }
 
+.editSummaryBox {
+  display: grid;
+  grid-template-rows: 25px 200px;
+}
+
+.editSummaryBox > textarea {
+  font-size: 14px;
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.editSkillsBox {
+  display: grid;
+  gap: 10px;
+}
+
+.editSkillsBox > input,
+.editEducationInput {
+  border-radius: 15px;
+  padding: 5px 15px;
+}
 
 @media print {
   .content{
@@ -236,4 +257,10 @@ h4 {
   .left {
     display: none;
   }
+}
+
+.editEducationBox,
+.editProjectsBox {
+  display: grid;
+  gap: 5px;
 }

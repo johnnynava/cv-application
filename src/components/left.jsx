@@ -1,17 +1,19 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import PersonalDetails from "./PersonalDetails";
-// import Summary from "./Summary";
+import Summary from "./Summary";
+import Skills from "./Skills";
 // import Employment from "./Employment";
-// import Projects from "./Projects";
-// import Education from "./Education";
+import Projects from "./Projects";
+import Education from "./Education";
 
 const components = {
   PersonalDetails: PersonalDetails,
-  //   Summary: Summary,
+  Summary: Summary,
+  Skills: Skills,
   //   Employment: Employment,
-  //   Projects: Projects,
-  //   Education: Education,
+  Projects: Projects,
+  Education: Education,
 };
 
 //existingInfo

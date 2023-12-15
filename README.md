@@ -1,8 +1,5 @@
-# React + Vite
+# CV Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I made this application for myself so some things that I deem important in a CV maker for everyone are not implemented (re-arranging the order of fields, adding/removing fields, adding more jobs or education, etc.). Other quality of life things such as having each project/job in a tab and expanding that specific tab for edit when you click on it are not implemented either.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I might come back later to this project and implement those but the main purpose of this was to get acquainted with React and things such as useState while still making something good enough that I would use myself. (I'm using this application as my personal CV maker)
