@@ -4,7 +4,7 @@ import Left from "./components/Left";
 import Right from "./components/Right";
 
 function App() {
-  const [personalDetails, editPersonalDetails] = useState({
+  const [personalDetails, setPersonalDetails] = useState({
     fullName: "Alana Smith",
     job: "Marine Biologist",
     email: "alana.smith@example.com",
@@ -15,11 +15,11 @@ function App() {
     github: "github.com/dummyuser",
   });
 
-  const [summary, editSummary] = useState(
+  const [summary, setSummary] = useState(
     "I'm a marine biologist with 5 years of experience researching humpback whales. I have a passion for what I do and I'm open to opportunities which let me grow as a person and a professional",
   );
 
-  const [skills, editSkills] = useState([
+  const [skills, setSkills] = useState([
     "Whales",
     "Sea Turtles",
     "Dolphins",
