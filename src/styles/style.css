@@ -172,6 +172,62 @@ h4 {
   line-height: 20px;
 }
 
+.editButton {
+  background-color: rgb(30, 56, 53);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0px;
+  position: relative;
+}
+
+.editButton:hover{
+  border: 3.5px solid rgb(89, 165, 156);
+}
+
+.editPersonalDetailsBox > label {
+  text-align: left;
+  padding-left: 5px;
+  color: black;
+}
+
+.editPersonalDetailsInput {
+  border-radius: 15px;
+  padding: 5px 15px
+}
+
+.left {
+  display: grid;
+  grid-template-rows: repeat(6, 50px);
+  gap: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.chevron {
+  height: 35px;
+}
+
+.chevron-selected {
+  height: 35px;
+}
+
+.editPersonalDetailsBox{
+  display: grid;
+  grid-auto-rows: 1fr;
+}
+
+.submitButton {
+  background-color: rgb(30, 56, 53);
+  justify-self: center;
+  margin-top: 15px;
+  border-radius: 50px;
+}
+
+
 @media print {
   .content{
     grid-template-columns: 0fr 1fr;

@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-// import Left from "./components/Left";
+import Left from "./components/Left";
 import Right from "./components/Right";
 
 function App() {
@@ -104,7 +104,14 @@ function App() {
 
   return (
     <div className="content">
-      <div className="left"></div>
+      <Left
+        personalDetails={personalDetails}
+        summary={summary}
+        skills={skills}
+        education={education}
+        projects={projects}
+        employment={employment}
+      ></Left>
       <Right
         personalDetails={personalDetails}
         summary={summary}

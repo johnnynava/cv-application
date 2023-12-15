@@ -1,8 +1,22 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import PersonalDetails from "./PersonalDetails";
+// import Summary from "./Summary";
+// import Employment from "./Employment";
+// import Projects from "./Projects";
+// import Education from "./Education";
 
+const components = {
+  PersonalDetails: PersonalDetails,
+  //   Summary: Summary,
+  //   Employment: Employment,
+  //   Projects: Projects,
+  //   Education: Education,
+};
+
+//existingInfo
 const EditButton = ({ name, editIsActive, onClick, existingInfo }) => {
-  const ComponentName = name;
+  const TargetComponent = components[name];
   let title;
   if (name === "PersonalDetails") {
     title = "Personal Details";
@@ -12,67 +26,83 @@ const EditButton = ({ name, editIsActive, onClick, existingInfo }) => {
   if (editIsActive === name) {
     return (
       <>
-        <div className="editButton" onClick={onClick}>
-          <p>{title}</p>
-          <img className="chevron"></img>
+        <div className="editButton" onClick={onClick} data-value={name}>
+          {title}
         </div>
-        <ComponentName existingInfo={existingInfo}></ComponentName>
+        <TargetComponent existingInfo={existingInfo}></TargetComponent>
       </>
     );
   } else if (editIsActive === "none") {
     return (
-      <>
-        <div className="editButton" onClick={onClick}>
-          <p>{title}</p>
-          <img className="chevron"></img>
-        </div>
-      </>
+      <div className="editButton" onClick={onClick} data-value={name}>
+        {title}
+      </div>
     );
   }
 };
 
-export default function Left() {
+// personalDetails={personalDetails}
+// summary={summary}
+// skills={skills}
+// education={education}
+// projects={projects}
+// employment={employment}
+
+export default function Left({
+  personalDetails,
+  summary,
+  skills,
+  education,
+  projects,
+  employment,
+}) {
   const [editIsActive, setEditIsActive] = useState("none");
   const handleEditClick = (e) => {
-    if (editIsActive === e.target.value) {
+    if (editIsActive === e.target.dataset.value) {
       setEditIsActive("none");
     } else {
-      setEditIsActive(e.target.value);
+      setEditIsActive(e.target.dataset.value);
     }
   };
   return (
-    <>
+    <div className="left">
       <EditButton
         name="PersonalDetails"
         editIsActive={editIsActive}
         onClick={handleEditClick}
+        existingInfo={personalDetails}
       ></EditButton>
       <EditButton
         name="Summary"
         editIsActive={editIsActive}
         onClick={handleEditClick}
+        existingInfo={summary}
       ></EditButton>
       <EditButton
         name="Skills"
         editIsActive={editIsActive}
         onClick={handleEditClick}
-      ></EditButton>
-      <EditButton
-        name="Education"
-        editIsActive={editIsActive}
-        onClick={handleEditClick}
-      ></EditButton>
-      <EditButton
-        name="Projects"
-        editIsActive={editIsActive}
-        onClick={handleEditClick}
+        existingInfo={skills}
       ></EditButton>
       <EditButton
         name="Employment"
         editIsActive={editIsActive}
         onClick={handleEditClick}
+        existingInfo={employment}
       ></EditButton>
-    </>
+      <EditButton
+        name="Projects"
+        editIsActive={editIsActive}
+        onClick={handleEditClick}
+        existingInfo={projects}
+      ></EditButton>
+      <EditButton
+        name="Education"
+        editIsActive={editIsActive}
+        onClick={handleEditClick}
+        existingInfo={education}
+      ></EditButton>
+    </div>
   );
 }
 
