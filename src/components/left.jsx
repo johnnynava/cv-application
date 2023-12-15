@@ -3,7 +3,7 @@ import { useState } from "react";
 import PersonalDetails from "./PersonalDetails";
 import Summary from "./Summary";
 import Skills from "./Skills";
-// import Employment from "./Employment";
+import Employment from "./Employment";
 import Projects from "./Projects";
 import Education from "./Education";
 
@@ -11,12 +11,11 @@ const components = {
   PersonalDetails: PersonalDetails,
   Summary: Summary,
   Skills: Skills,
-  //   Employment: Employment,
+  Employment: Employment,
   Projects: Projects,
   Education: Education,
 };
 
-//existingInfo
 const EditButton = ({ name, editIsActive, onClick, existingInfo }) => {
   const TargetComponent = components[name];
   let title;
@@ -42,13 +41,6 @@ const EditButton = ({ name, editIsActive, onClick, existingInfo }) => {
     );
   }
 };
-
-// personalDetails={personalDetails}
-// summary={summary}
-// skills={skills}
-// education={education}
-// projects={projects}
-// employment={employment}
 
 export default function Left({
   personalDetails,
@@ -107,12 +99,3 @@ export default function Left({
     </div>
   );
 }
-
-// PROYECTOS OBJ[PROYECTOS]
-//  EDITPROYECTOS
-//  SHOWPROYECTOS
-//APP -> PROJECTS(OBJ)
-//  LEFT
-//    EDITPROJECTS
-//  RIGHT
-//    SHOWPROJECTS

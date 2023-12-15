@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import { Fragment } from "react";
 
 export default function Projects({ existingInfo }) {
   const mappedProjects = existingInfo.map((project, index) => {
     return (
-      <Fragment key={project}>
-        <label htmlFor={index}>Project Title</label>
+      <Fragment key={index}>
+        <label htmlFor={index + "title"}>Project Title</label>
         <input
-          id={index}
+          id={index + "title"}
           type="text"
-          value={project.tile}
+          value={project.title}
           className="editProjectsInput"
         ></input>
         <label htmlFor={project.link}>Project Link</label>
@@ -18,9 +19,9 @@ export default function Projects({ existingInfo }) {
           value={project.link}
           className="editProjectsInput"
         ></input>
-        <label htmlFor={project.description}>Project Description</label>
+        <label htmlFor={index + "description"}>Project Description</label>
         <textarea
-          id={project.description}
+          id={index + "description"}
           value={project.description}
           className="editProjectsInput"
         ></textarea>

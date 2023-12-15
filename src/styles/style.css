@@ -8,6 +8,7 @@
   gap: 32px;
   grid-template-areas: 
   "left right";
+  justify-content: center;
 }
 
 .left {
@@ -244,9 +245,12 @@ label {
 }
 
 .editSkillsBox > input,
-.editEducationInput {
+.editEducationInput,
+.editProjectsInput,
+.editJobsInput {
   border-radius: 15px;
   padding: 5px 15px;
+  border-style: none;
 }
 
 @media print {
@@ -260,7 +264,22 @@ label {
 }
 
 .editEducationBox,
-.editProjectsBox {
+.editProjectsBox,
+.editJobsBox {
   display: grid;
   gap: 5px;
+}
+
+.editProjectsBox > textarea {
+  height: 190px;
+}
+
+.editJobsBox > textarea {
+  height: 70px;
+}
+
+.editJobsBox > p {
+  margin: 0px;
+  color: black;
+  text-align: left;
 }
