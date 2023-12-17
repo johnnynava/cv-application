@@ -3,10 +3,37 @@ import { Fragment } from "react";
 
 export default function Employment({ existingInfo, setExistingInfo }) {
   const mappedJobs = existingInfo.map((job, index) => {
-    const mappedDescription = job.description.map((bullet, index) => {
+    const handleChange = (e) => {
+      setExistingInfo((prev) => {
+        return prev.map((job, i) => {
+          return i === index
+            ? { ...job, [e.target.name]: e.target.value }
+            : job;
+        });
+      });
+    };
+    const mappedDescription = job.description.map((bullet, descIndex) => {
+      const handleChangeForDesc = (e) => {
+        setExistingInfo((prev) => {
+          return prev.map((job, i) => {
+            return i === index
+              ? {
+                  ...job,
+                  description: job.description.map((blt, j) => {
+                    return j === descIndex ? e.target.value : blt;
+                  }),
+                }
+              : job;
+          });
+        });
+      };
       return (
-        <Fragment key={index}>
-          <textarea className="editJobsInput" value={bullet}></textarea>
+        <Fragment key={descIndex}>
+          <textarea
+            className="editJobsInput"
+            value={bullet}
+            onChange={handleChangeForDesc}
+          ></textarea>
         </Fragment>
       );
     });
@@ -18,6 +45,8 @@ export default function Employment({ existingInfo, setExistingInfo }) {
           type="text"
           className="editJobsInput"
           value={job.position}
+          name="position"
+          onChange={handleChange}
         ></input>
         <label htmlFor={index + "company"}>Company</label>
         <input
@@ -25,6 +54,8 @@ export default function Employment({ existingInfo, setExistingInfo }) {
           type="text"
           className="editJobsInput"
           value={job.company}
+          name="company"
+          onChange={handleChange}
         ></input>
         <label htmlFor={index + "years"}>Date</label>
         <input
@@ -32,6 +63,8 @@ export default function Employment({ existingInfo, setExistingInfo }) {
           type="text"
           className="editJobsInput"
           value={job.years}
+          name="years"
+          onChange={handleChange}
         ></input>
         <label htmlFor={index + "location"}>Location</label>
         <input
@@ -39,6 +72,8 @@ export default function Employment({ existingInfo, setExistingInfo }) {
           type="text"
           className="editJobsInput"
           value={job.location}
+          name="location"
+          onChange={handleChange}
         ></input>
         <p>Description</p>
         {mappedDescription}
@@ -48,9 +83,6 @@ export default function Employment({ existingInfo, setExistingInfo }) {
   return (
     <form action="#" method="post" className="editJobsBox">
       {mappedJobs}
-      <button type="submit" className="submitButton">
-        Submit
-      </button>
     </form>
   );
 }

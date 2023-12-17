@@ -9,9 +9,6 @@ export default function Summary({ existingInfo, setExistingInfo }) {
         value={existingInfo}
         onChange={(e) => setExistingInfo(e.target.value)}
       ></textarea>
-      <button type="submit" className="submitButton">
-        Submit
-      </button>
     </form>
   );
 }

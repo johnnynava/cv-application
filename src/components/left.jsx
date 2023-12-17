@@ -101,7 +101,7 @@ export default function Left({
         editIsActive={editIsActive}
         onClick={handleEditClick}
         existingInfo={employment}
-        setExistingInfo={setEducation}
+        setExistingInfo={setEmployment}
       ></EditButton>
       <EditButton
         name="Projects"
@@ -115,7 +115,7 @@ export default function Left({
         editIsActive={editIsActive}
         onClick={handleEditClick}
         existingInfo={education}
-        setExistingInfo={setEmployment}
+        setExistingInfo={setEducation}
       ></EditButton>
     </div>
   );
