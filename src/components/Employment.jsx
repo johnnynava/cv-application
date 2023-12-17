@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Fragment } from "react";
 
-export default function Employment({ existingInfo }) {
+export default function Employment({ existingInfo, setExistingInfo }) {
   const mappedJobs = existingInfo.map((job, index) => {
     const mappedDescription = job.description.map((bullet, index) => {
       return (

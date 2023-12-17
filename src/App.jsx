@@ -106,11 +106,17 @@ function App() {
     <div className="content">
       <Left
         personalDetails={personalDetails}
+        setPersonalDetails={setPersonalDetails}
         summary={summary}
+        setSummary={setSummary}
         skills={skills}
+        setSkills={setSkills}
         education={education}
+        setEducation={setEducation}
         projects={projects}
+        setProjects={setProjects}
         employment={employment}
+        setEmployment={setEmployment}
       ></Left>
       <Right
         personalDetails={personalDetails}

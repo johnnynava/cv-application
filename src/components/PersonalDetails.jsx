@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function PersonalDetails({ existingInfo }) {
+export default function PersonalDetails({ existingInfo, setExistingInfo }) {
   return (
     <form action="#" method="post" className="editPersonalDetailsBox">
       <label htmlFor="fullNameInput">Full Name</label>

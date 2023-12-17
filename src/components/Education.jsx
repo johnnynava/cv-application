@@ -1,4 +1,4 @@
-export default function Education({ existingInfo }) {
+export default function Education({ existingInfo, setExistingInfo }) {
   return (
     <form action="#" method="post" className="editEducationBox">
       <label htmlFor="universityInput">University</label>

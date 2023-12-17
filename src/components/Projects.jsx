@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Fragment } from "react";
 
-export default function Projects({ existingInfo }) {
+export default function Projects({ existingInfo, setExistingInfo }) {
   const mappedProjects = existingInfo.map((project, index) => {
     return (
       <Fragment key={index}>
