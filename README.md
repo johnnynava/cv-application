@@ -1,4 +1,5 @@
 # CV Maker
+[Live Demo](https://johnnynava.github.io/cv-application/)
 
 I made this application for myself so some things that I deem important in a CV maker for everyone are not implemented (re-arranging the order of fields, adding/removing fields, adding/removing jobs, projects or education, etc.). Other quality of life things such as having each project/job in a tab and expanding that specific tab for edit when you click on it are not implemented either.
 
