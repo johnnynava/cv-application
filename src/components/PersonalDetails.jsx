@@ -18,6 +18,24 @@ export default function PersonalDetails({ existingInfo, setExistingInfo }) {
         className="editPersonalDetailsInput"
         onChange={handleChange}
       ></input>
+      <label htmlFor="jobInput">Job Title</label>
+      <input
+        value={existingInfo.job}
+        name="job"
+        type="text"
+        id="jobInput"
+        className="editPersonalDetailsInput"
+        onChange={handleChange}
+      ></input>
+      <label htmlFor="jobInput">Email</label>
+      <input
+        value={existingInfo.email}
+        name="email"
+        type="text"
+        id="jobInput"
+        className="editPersonalDetailsInput"
+        onChange={handleChange}
+      ></input>
       <label htmlFor="phoneInput">Phone Number</label>
       <input
         value={existingInfo.phone}

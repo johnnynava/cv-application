@@ -67,16 +67,16 @@ export default function Right({
             <p>{personalDetails.location}</p>
           </div>
           <div>
-            <img src={linkedinLogo}></img>
-            <p>{personalDetails.linkedIn}</p>
-          </div>
-          <div>
-            <img src={websiteLogo}></img>
-            <p>{personalDetails.website}</p>
-          </div>
-          <div>
             <img src={githubLogo}></img>
             <p>{personalDetails.github}</p>
+          </div>
+          {/* <div>
+            <img src={websiteLogo}></img>
+            <p>{personalDetails.website}</p>
+          </div> */}
+          <div>
+            <img src={linkedinLogo}></img>
+            <p id="linkedIn">{personalDetails.linkedIn}</p>
           </div>
         </div>
       </div>
@@ -93,10 +93,10 @@ export default function Right({
           <h2>Employment</h2>
           {mappedEmployment}
         </div>
-        <div className="projects">
+        {/* <div className="projects">
           <h2>Projects</h2>
           {mappedProjects}
-        </div>
+        </div> */}
         <div className="education">
           <h2>Education</h2>
           <h3 className="university">{education.university}</h3>
